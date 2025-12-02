@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Oryzion Code</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navegacao">
+        <div class="nav-container">
+            <img src="./img/logo.svg" alt="Logo da Oryzion" class="logo-header">
+
+            <ul class="menu">
+                <li><a href="#inicio" class="menu-link">Início</a></li>
+                <li><a href="#sobre" class="menu-link">Apresentação</a></li>
+                <li><a href="#time" class="menu-link">Time</a></li>
+            </ul>
+
+            <div class="hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INÍCIO -->
+    <main id="inicio" class="cabecalho">
+        <h1>Oryzion Code</h1>
+        <h2 class="cabecalho-sub-titulo">Tecnologia e Soluções Inteligentes</h2>
+    </main>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Apresentação Institucional</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Somos uma empresa voltada para a área de tecnologia, formada por uma retaguarda que conta com seis Desenvolvedores de Sistemas. O diferencial está na nossa assertividade em compreender os desafios das empresas, e a nossa receita é solucioná-los com eficiência diante de quaisquer cenários.
+            </p>
+        </div>
+    </section>
+
+    <!-- TIME -->
+    <section id="time" class="time">
+        <h2 class="contatos-titulo">Time Oryzion Code</h2>
+        <p class="contatos-titulo">Clique em um dos cards abaixo para acessar o perfil no LinkedIn</p>
+
+        <div class="carrossel">
+            <button class="carrossel-btn left">&#10094;</button>
+
+            <div class="carrossel-container">
+
+                <a href="https://www.linkedin.com/in/agatha-gomes-673884313/" target="_blank" class="membro-card">
+                    <img src="./img/foto_agatha.jpeg" class="membro-imagem">
+                    <p class="membro-nome">Agatha Gomes</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/clara-crastechini-476779330/" target="_blank" class="membro-card">
+                    <img src="./img/foto_clara.jpeg" class="membro-imagem">
+                    <p class="membro-nome">Clara Crastechini</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-749b32300/" target="_blank" class="membro-card">
+                    <img src="./img/foto_joao.jpeg" class="membro-imagem">
+                    <p class="membro-nome">João Cruz</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/kaueantoniosantos/" target="_blank" class="membro-card">
+                    <img src="./img/foto_kaue.jpeg" class="membro-imagem">
+                    <p class="membro-nome">Kauê Santos</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rikelme-silva-87563222b/" target="_blank" class="membro-card">
+                    <img src="./img/foto_rikelme.jpeg" class="membro-imagem">
+                    <p class="membro-nome">Rikelme Silva</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/yasmin-machado-da-silva01/" target="_blank" class="membro-card">
+                    <img src="./img/foto_yasmin.jpeg" class="membro-imagem">
+                    <p class="membro-nome">Yasmin Silva</p>
+                </a>
+
+            </div>
+
+            <button class="carrossel-btn right">&#10095;</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-conteudo">
+            <p class="footer-texto">© 2025 Oryzion Code — Tecnologia e Soluções Inteligentes</p>
+        </div>
+    </footer>
+
+    <script>
+        // CARROSSEL
+        const carrossel = document.querySelector('.carrossel-container');
+        document.querySelector('.left').onclick = () => carrossel.scrollBy({ left: -300, behavior: 'smooth' });
+        document.querySelector('.right').onclick = () => carrossel.scrollBy({ left: 300, behavior: 'smooth' });
+
+        // MENU HAMBÚRGUER
+        const hamburguer = document.querySelector('.hamburguer');
+        const menu = document.querySelector('.menu');
+
+        hamburguer.addEventListener('click', () => {
+            menu.classList.toggle('menu-ativo');
+            hamburguer.classList.toggle('aberto');
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
